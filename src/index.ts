@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 import responseTime from 'response-time';
 import type { Request, Response } from 'express';
 import { restResponseTimeHistogram, startMetricsServer } from '../utils/metrics';

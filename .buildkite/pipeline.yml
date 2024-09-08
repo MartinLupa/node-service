@@ -1,0 +1,17 @@
+steps:
+  - label: ":docker: Build Docker Image"
+    command:
+      - docker build -t my-node-service .
+
+  - label: ":test_tube: Run Unit Tests"
+    command:
+      - docker run my-node-service npm test
+
+  - label: ":rocket: Deploy Service"
+    command:
+      - docker-compose -f docker-compose.yml up -d
+      - curl http://localhost:3000/healthcheck  # Ensure service is up
+
+  - label: ":whale: Scale Service"
+    command:
+      - docker service scale my-node-service=3  # Scale to 3 instances

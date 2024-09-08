@@ -1,27 +1,12 @@
 {
   "compilerOptions": {
-    // Enable latest features
-    "lib": ["ESNext", "DOM"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
-
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "noEmit": true,
-
-    // Best practices
-    "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "target": "ES2022",                     // Latest ECMAScript features
+    "module": "ESNext",                     // Use ES modules
+    "moduleResolution": "node",             // Module resolution strategy
+    "rootDir": "./src",                     // Source files are in the 'src' directory
+    "outDir": "./dist",                     // Compiled JavaScript files will go in 'dist'
+    "strict": true,                         // Enable strict type checking
+    "esModuleInterop": true                 // Enables compatibility with CommonJS modules
+  },
+  "include": ["src/**/*"]
 }
