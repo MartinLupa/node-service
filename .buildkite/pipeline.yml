@@ -9,7 +9,7 @@ steps:
 
   - label: ":rocket: Deploy Service"
     command:
-      - docker-compose -f docker-compose.yml up -d
+      - docker-compose -f compose.yml up -d
       - curl http://localhost:3000/healthcheck  # Ensure service is up
 
   - label: ":whale: Scale Service"
