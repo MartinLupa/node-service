@@ -1,4 +1,5 @@
 import express from 'express';
+import type { Request, Response } from 'express';
 import { Histogram, register, collectDefaultMetrics } from 'prom-client';
 
 const app = express();
@@ -38,7 +39,7 @@ export function startMetricsServer() {
   // Collect default system-level metrics (CPU, memory, etc.)
   collectDefaultMetrics();
 
-  app.get('/metrics', async (req, res) => {
+  app.get('/metrics', async (req: Request, res: Response) => {
     res.set('Content-Type', register.contentType);
 
     // Return all registered metrics

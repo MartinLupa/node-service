@@ -25,3 +25,6 @@ Nodejs 22
 - supports --watch mode
 - native support for process.env, no need for dotenv package anymore.
 - Issues when trying to build the project: packages still not supporting node v22 (Early addoption issues).
+
+Typescript:
+- need for .js in the import of a .ts file not so nice. Why? metrics.js requires me to add .js, otherwise on the tsc step it wont recognise the module.

@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2022",                     // Latest ECMAScript features
-    "module": "ESNext",                     // Use ES modules
+    "module": "ESNext",    
     "moduleResolution": "node",             // Module resolution strategy
-    "rootDir": "./src",                     // Source files are in the 'src' directory
+    "rootDir": ".",                     // Source files are in the 'src' directory
     "outDir": "./dist",                     // Compiled JavaScript files will go in 'dist'
     "strict": true,                         // Enable strict type checking
-    "esModuleInterop": true                 // Enables compatibility with CommonJS modules
+    "esModuleInterop": true, 
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "utils/**/*"]
 }
