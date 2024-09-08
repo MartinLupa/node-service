@@ -1,11 +1,7 @@
 steps:
-  - label: ":docker: Build Docker Image"
-    command:
-      - docker build -t my-node-service .
-
   - label: ":rocket: Deploy Service"
     command:
-      - docker-compose -f compose.yml up -d
+      - docker-compose up -d
 
   # - label: ":whale: Scale Service"
   #   command:
